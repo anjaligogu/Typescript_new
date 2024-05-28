@@ -3,11 +3,9 @@ var Util;
     function concatKeysAndValues(obj) {
         var result = "";
         for (var key in obj) {
-            // if (typeof obj[key] === "object") {
-            //   result += concatKeysAndValues(obj[key] as { [key: string]: string });
-            // } else {
+            
             result += key + ": " + obj[key] + ", ";
-            // }
+          
         }
         return result;
     }
