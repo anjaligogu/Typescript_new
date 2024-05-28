@@ -22,13 +22,7 @@ namespace Util {
   }): string {
     let result: string = "";
     for (let key in obj) {
-      if (obj.hasOwnProperty(key)) {
-        if (typeof obj[key] === "object") {
-          result += concatKeysAndValues(obj[key] as { [key: string]: string });
-        } else {
-          result += key + ": " + obj[key] + ", ";
-        }
-      }
+      result += key + ": " + obj[key] + ", ";
     }
     return result;
   }
