@@ -14,7 +14,10 @@ type Teacher = {
   state: string;
 };
 
-type RequiredStudent = Required<Student>;
+// type RequiredStudent = Required<Student>;
+type RequiredStudent<T> = {
+  [K in keyof T]-?: T[K];
+};
 
 namespace Util {
   export function concatKeysAndValues(obj: {
